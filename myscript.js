@@ -28,8 +28,8 @@ function init() {
 function findIndexOfItemWithBarcode(barcode) {
     
     for (index in items) {
-        console.log(items[index].id)
-        if (barcode == items[index].id) {
+        console.log(items[index].roll)
+        if (barcode== items[index].roll) {
             // found the item
             return index
         }
@@ -41,11 +41,13 @@ function updateDetailsOfItemAtIndex(index) {
     
     var details = "name: " + items[index].name
     details += "<br>"
-    details += items[index].numb
-    details += "<br>"
     details += items[index].branch
     details += "<br>"
-   // details += "Rs. " + items[index].price
+    details += items[index].roll
+    details += "<br>"
+    details += "aadharnumber " + items[index].aadhar
+    details += "<br>"
+    details += items[index].phone
     
     document.getElementById("itemDetails").innerHTML = details
 //    console.log("id: " + items[index].id)
